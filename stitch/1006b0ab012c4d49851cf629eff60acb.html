@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SignalShelf Mini - Record Editor</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px; /* Base size, adjusted via utility classes where needed */
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#3c475a",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-container": "#35260c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface": "#0b1c30",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#a38c6a",
+                        "inverse-surface": "#213145",
+                        "on-background": "#0b1c30",
+                        "outline-variant": "#c5c6cd",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed": "#d8e3fb",
+                        "primary-container": "#1e293b",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "on-tertiary-fixed": "#271902",
+                        "primary": "#091426",
+                        "tertiary-fixed-dim": "#ddc39d",
+                        "surface-tint": "#545f73",
+                        "secondary-container": "#6063ee",
+                        "inverse-on-surface": "#eaf1ff",
+                        "inverse-primary": "#bcc7de",
+                        "on-primary-fixed": "#111c2d",
+                        "surface-container": "#e5eeff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary": "#1e1200",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-container": "#8590a6",
+                        "outline": "#75777d",
+                        "on-error-container": "#93000a",
+                        "secondary": "#4648d4",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed-dim": "#bcc7de",
+                        "tertiary-fixed": "#fadfb8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#07006c",
+                        "surface-dim": "#cbdbf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "md": "12px",
+                        "lg": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "xl": "24px",
+                        "margin": "16px",
+                        "gutter": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Inter", "sans-serif"],
+                        "mono-sm": ["JetBrains Mono", "monospace"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "title-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex items-center justify-center p-margin antialiased">
+<!-- Modal / Editor Container -->
+<!-- Suppressing global navigation to prioritize the operational canvas for a task-focused flow -->
+<div class="w-full max-w-2xl bg-surface border border-outline-variant rounded shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.05)] flex flex-col overflow-hidden">
+<!-- Header -->
+<div class="flex items-center justify-between px-lg py-md border-b border-outline-variant bg-surface-container-lowest">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">edit_document</span>
+<h1 class="font-headline-sm text-headline-sm text-primary">Record Editor</h1>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant ml-sm px-xs py-[2px] bg-surface-container rounded border border-outline-variant">REC-8924</span>
+</div>
+<div class="flex items-center gap-lg">
+<!-- Unsaved Indicator -->
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic">Unsaved changes</span>
+</div>
+<!-- Close Action -->
+<button aria-label="Close Editor" class="text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+</div>
+<!-- Form Content -->
+<form class="p-lg flex flex-col gap-xl">
+<!-- Context Banner (Optional Guidance) -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-md flex gap-sm items-start">
+<span class="material-symbols-outlined text-primary mt-[2px]" style="font-size: 16px;">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant m-0">
+                    Modify the operational parameters for this record. Ensure the priority alignment matches current system load constraints before saving.
+                </p>
+</div>
+<div class="flex flex-col md:flex-row gap-lg">
+<!-- Record Name (Error State Demo) -->
+<div class="flex flex-col gap-xs flex-1">
+<label class="font-label-md text-label-md text-on-surface flex justify-between" for="record-name">
+<span>Record Name <span class="text-error">*</span></span>
+</label>
+<div class="relative">
+<input aria-describedby="record-name-error" aria-invalid="true" class="w-full h-[32px] px-sm font-body-md text-body-md text-on-surface bg-error-container/10 border border-error rounded focus:outline-none focus:ring-2 focus:ring-error focus:border-transparent transition-shadow" id="record-name" type="text" value="Alpha_Node_Config_Draft"/>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-error pointer-events-none" style="font-size: 16px;">error</span>
+</div>
+<p class="font-body-sm text-body-sm text-error flex items-center gap-xs mt-[2px]" id="record-name-error">
+                        Naming collision detected. This identifier is already active.
+                    </p>
+</div>
+<!-- Type Dropdown -->
+<div class="flex flex-col gap-xs flex-1">
+<label class="font-label-md text-label-md text-on-surface" for="record-type">Classification Type</label>
+<div class="relative">
+<select class="w-full h-[32px] pl-sm pr-[28px] font-body-md text-body-md text-on-surface bg-surface border border-outline-variant rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none transition-shadow" id="record-type">
+<option value="config">System Configuration</option>
+<option selected="" value="telemetry">Telemetry Stream</option>
+<option value="auth">Authentication Protocol</option>
+<option value="batch">Batch Process</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-size: 16px;">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Priority Radio Buttons -->
+<div class="flex flex-col gap-sm">
+<label class="font-label-md text-label-md text-on-surface">Execution Priority</label>
+<div class="flex gap-md flex-wrap">
+<label class="flex items-center gap-xs cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface border-outline-variant focus:ring-primary focus:ring-2 focus:ring-offset-1 focus:ring-offset-surface" name="priority" type="radio" value="low"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">Low (Batch)</span>
+</label>
+<label class="flex items-center gap-xs cursor-pointer group">
+<input checked="" class="w-4 h-4 text-primary bg-surface border-outline-variant focus:ring-primary focus:ring-2 focus:ring-offset-1 focus:ring-offset-surface" name="priority" type="radio" value="standard"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">Standard (Queue)</span>
+</label>
+<label class="flex items-center gap-xs cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface border-outline-variant focus:ring-primary focus:ring-2 focus:ring-offset-1 focus:ring-offset-surface" name="priority" type="radio" value="high"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error inline-block"></span> High (Real-time)
+                        </span>
+</label>
+</div>
+</div>
+<!-- Description Textarea -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface flex justify-between" for="record-desc">
+<span>Operational Description</span>
+<span class="text-on-surface-variant font-normal">Optional</span>
+</label>
+<textarea class="w-full p-sm font-body-sm text-body-sm text-on-surface bg-surface border border-outline-variant rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow resize-y min-h-[80px]" id="record-desc" placeholder="Detail the intended payload structure and execution conditions..." rows="3"></textarea>
+</div>
+<!-- Activity Status Toggle -->
+<div class="flex items-center justify-between py-sm border-t border-outline-variant mt-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Activity Status</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enable record for immediate ingestion upon save.</span>
+</div>
+<!-- Custom Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary peer-focus:ring-offset-1 peer-focus:ring-offset-surface rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</form>
+<!-- Footer Actions -->
+<div class="flex items-center justify-end gap-md px-lg py-md border-t border-outline-variant bg-surface-container-lowest">
+<button class="h-[32px] px-lg font-label-md text-label-md text-on-surface bg-surface hover:bg-surface-container-high border border-outline-variant rounded transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1" type="button">
+                Cancel
+            </button>
+<button class="h-[32px] px-lg font-label-md text-label-md text-on-primary bg-primary hover:opacity-90 rounded transition-opacity flex items-center gap-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 shadow-sm" type="button">
+<span class="material-symbols-outlined" style="font-size: 16px;">save</span>
+                Save Record
+            </button>
+</div>
+</div>
+</body></html>

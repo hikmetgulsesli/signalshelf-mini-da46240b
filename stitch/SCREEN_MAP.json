@@ -1,0 +1,38 @@
+[
+  {
+    "screenId": "abcb0b5db41d4e369f2959422dbcd916",
+    "name": "Settings and Preferences - SignalShelf Mini",
+    "type": "settings",
+    "description": "Settings and Preferences - SignalShelf Mini screen",
+    "surfaceIds": [
+      "SURF_SETTINGS_AND_PREFERENCES"
+    ]
+  },
+  {
+    "screenId": "bbe98f54e3b9441facb63a5a63c66823",
+    "name": "Record Operations - SignalShelf Mini",
+    "type": "app-screen",
+    "description": "Record Operations - SignalShelf Mini screen",
+    "surfaceIds": [
+      "SURF_RECORD_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "1006b0ab012c4d49851cf629eff60acb",
+    "name": "Record Editor - SignalShelf Mini",
+    "type": "form",
+    "description": "Record Editor - SignalShelf Mini screen",
+    "surfaceIds": [
+      "SURF_RECORD_EDITOR"
+    ]
+  },
+  {
+    "screenId": "d6323cd940954879b857ca8cacaa58ca",
+    "name": "Empty and Error Recovery - SignalShelf Mini",
+    "type": "error",
+    "description": "Empty and Error Recovery - SignalShelf Mini screen",
+    "surfaceIds": [
+      "SURF_EMPTY_AND_ERROR_RECOVERY"
+    ]
+  }
+]

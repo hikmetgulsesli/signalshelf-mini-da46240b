@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SignalShelf Mini - Recovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#3c475a",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-container": "#35260c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface": "#0b1c30",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#a38c6a",
+                        "inverse-surface": "#213145",
+                        "on-background": "#0b1c30",
+                        "outline-variant": "#c5c6cd",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed": "#d8e3fb",
+                        "primary-container": "#1e293b",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "on-tertiary-fixed": "#271902",
+                        "primary": "#091426",
+                        "tertiary-fixed-dim": "#ddc39d",
+                        "surface-tint": "#545f73",
+                        "secondary-container": "#6063ee",
+                        "inverse-on-surface": "#eaf1ff",
+                        "inverse-primary": "#bcc7de",
+                        "on-primary-fixed": "#111c2d",
+                        "surface-container": "#e5eeff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary": "#1e1200",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-container": "#8590a6",
+                        "outline": "#75777d",
+                        "on-error-container": "#93000a",
+                        "secondary": "#4648d4",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed-dim": "#bcc7de",
+                        "tertiary-fixed": "#fadfb8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#07006c",
+                        "surface-dim": "#cbdbf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "md": "12px",
+                        "lg": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "xl": "24px",
+                        "margin": "16px",
+                        "gutter": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "mono-sm": ["JetBrains Mono"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col md:flex-row">
+<!-- Mobile TopNav (Hidden on MD+) -->
+<header class="md:hidden w-full bg-surface border-b border-outline-variant flex justify-between items-center h-unit*8 px-lg mx-auto z-50 sticky top-0">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">SignalShelf Mini</div>
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<img alt="User Avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS-cqcEqM_LQQlozvWeWrzPKemueDsmgrlGIdHp7OfgoaUTb2aY_fQoKVN_HWbfXwqWORbxL8e6BFRypaHHXjcdUq-ckHbUe2sD90L0lwcZ_QxGI8n1CJ9FyaMVmrxCTXVheirFncBWAF-nGzxpaEYeZ3BtJQ3Jq1cBVyZSuX5rQgWgX92bEAMRUHCyKfrYvQmd0D8jd6boEeeVPBBEwBMVMrDvtqyPCwQUd2xbj0CpOZZ6-eRle6WB3LwDuO3B9MY0NiJCtoVssBk"/>
+</div>
+</header>
+<!-- SideNavBar (Visible on MD+) -->
+<nav class="hidden md:flex flex-col bg-background border-r border-outline-variant fixed left-0 top-0 h-full w-64 py-lg px-md z-40">
+<div class="mb-xl px-sm">
+<div class="font-title-md text-title-md font-bold text-primary">Operational Core</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-xs">V2.4 Active</div>
+</div>
+<div class="flex-1 flex flex-col gap-unit">
+<a class="flex items-center gap-sm text-on-surface-variant p-sm hover:bg-surface-container-low transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Operations
+            </a>
+<a class="flex items-center gap-sm text-on-surface-variant p-sm hover:bg-surface-container-low transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg p-sm hover:bg-surface-container-low transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings_backup_restore">settings_backup_restore</span>
+                Recovery
+            </a>
+</div>
+<div class="mt-auto flex flex-col gap-unit pt-xl border-t border-outline-variant">
+<a class="flex items-center gap-sm text-on-surface-variant p-sm hover:bg-surface-container-low transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                Help
+            </a>
+<a class="flex items-center gap-sm text-on-surface-variant p-sm hover:bg-surface-container-low transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+                Status
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:ml-64 min-h-[calc(100vh-4rem)] md:min-h-screen relative overflow-hidden">
+<!-- Desktop TopNav (Visible on MD+, integrated into main area for layout) -->
+<header class="hidden md:flex bg-surface border-b border-outline-variant justify-between items-center h-16 px-lg w-full z-30 sticky top-0">
+<div class="flex items-center gap-lg">
+<div class="font-headline-sm text-headline-sm font-bold text-primary border-r border-outline-variant pr-lg mr-sm">SignalShelf Mini</div>
+<nav class="flex gap-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">Operations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">Settings</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1 opacity-80 transition-opacity" href="#">Recovery</a>
+</nav>
+</div>
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="settings">settings</span>
+<img alt="User Avatar" class="w-8 h-8 rounded-full border border-outline-variant ml-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpBX-xIdEiG6-Tj5XnlJtLtkc5stG3Ceg6FXevBXfpY5oG47bWpFzLdENF0MPOzefNGRoC_RlBRpmYbO94RwTGC56_HgMbB77dAcYgoHlF_nsNl9VKTvESfU3zFUBGiR6I6JdFH1unk53a5hpsr61B80GsqTATDqt7Av6SyrC8qGbcqQk4qOQbAeIfBOoUWErGGi0v9B3UfrBjQP1ZfEmYGuuYDOC6G4AsOtkpOjZy6t160KvFOfHuoHZ8hOjW39e41fiGAZ_vwBDN"/>
+</div>
+</header>
+<!-- Recovery Canvas -->
+<div class="flex-1 flex items-center justify-center p-md sm:p-lg bg-surface-container-lowest relative">
+<!-- Subtle background grid pattern for technical feel -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background-image: radial-gradient(var(--tw-colors-primary) 1px, transparent 1px); background-size: 24px 24px;"></div>
+<!-- Error State Panel (Bento Grid Style) -->
+<div class="w-full max-w-2xl bg-surface border border-outline-variant rounded-xl shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col sm:flex-row relative z-10">
+<!-- Left Decorative/Status Area -->
+<div class="bg-error-container sm:w-1/3 p-lg flex flex-col items-center justify-center text-center border-b sm:border-b-0 sm:border-r border-outline-variant">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center mb-md shadow-sm border border-error-container/50">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="cloud_off" style="font-variation-settings: 'FILL' 1;">cloud_off</span>
+</div>
+<div class="font-mono-sm text-mono-sm text-on-error-container bg-surface-container-lowest/50 px-sm py-1 rounded border border-error-container mb-2">ERR_042</div>
+<div class="font-label-md text-label-md text-on-error-container uppercase tracking-wider">System Halt</div>
+</div>
+<!-- Right Content Area -->
+<div class="p-lg sm:w-2/3 flex flex-col justify-center bg-surface">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-xs">Network connection lost</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">The operational core cannot reach the upstream data providers. Please verify active network routes or consult system status.</p>
+<div class="bg-surface-container-low border border-outline-variant rounded p-sm mb-lg">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Last Ping:</span>
+<span class="font-mono-sm text-mono-sm text-on-surface">14:02:45 UTC</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Node:</span>
+<span class="font-mono-sm text-mono-sm text-on-surface">us-east-cluster-04</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm items-center">
+<button class="h-8 px-md bg-primary text-on-primary font-label-md text-label-md rounded flex items-center gap-xs hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span>
+                            Retry Load
+                        </button>
+<button class="h-8 px-md bg-surface-container-low text-primary font-label-md text-label-md border border-outline-variant rounded flex items-center gap-xs hover:bg-surface-container-high transition-colors">
+                            Create New Record
+                        </button>
+<a class="font-body-sm text-body-sm text-secondary hover:text-secondary-fixed-dim underline ml-auto mt-2 sm:mt-0" href="#">Clear All Filters</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant flex flex-col sm:flex-row justify-between items-center py-xs px-lg w-full mt-auto z-30">
+<div class="font-label-md text-label-md uppercase tracking-wider text-primary mb-2 sm:mb-0">
+                © 2024 SignalShelf Mini Operational System
+            </div>
+<div class="flex gap-md font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-secondary transition-colors font-bold text-primary flex items-center gap-xs" href="#">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    System Status: Online
+                </a>
+<a class="hover:text-secondary transition-colors" href="#">API Docs</a>
+<a class="hover:text-secondary transition-colors" href="#">Support</a>
+</div>
+</footer>
+</main>
+<!-- Mobile BottomNavBar (Visible only on mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-low border-t border-outline-variant flex justify-around items-center h-16 z-50 pb-safe">
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-[10px]">Operations</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-label-md text-[10px]">Settings</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-secondary" href="#">
+<div class="bg-secondary-container text-on-secondary-container px-3 py-0.5 rounded-full mb-1">
+<span class="material-symbols-outlined" data-icon="settings_backup_restore">settings_backup_restore</span>
+</div>
+<span class="font-label-md text-[10px] font-bold">Recovery</span>
+</a>
+</nav>
+</body></html>

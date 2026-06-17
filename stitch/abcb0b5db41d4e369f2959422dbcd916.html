@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings and Preferences - SignalShelf Mini</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#3c475a",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-container": "#35260c",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface": "#0b1c30",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#a38c6a",
+                        "inverse-surface": "#213145",
+                        "on-background": "#0b1c30",
+                        "outline-variant": "#c5c6cd",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed": "#d8e3fb",
+                        "primary-container": "#1e293b",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "on-tertiary-fixed": "#271902",
+                        "primary": "#091426",
+                        "tertiary-fixed-dim": "#ddc39d",
+                        "surface-tint": "#545f73",
+                        "secondary-container": "#6063ee",
+                        "inverse-on-surface": "#eaf1ff",
+                        "inverse-primary": "#bcc7de",
+                        "on-primary-fixed": "#111c2d",
+                        "surface-container": "#e5eeff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary": "#1e1200",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-container": "#8590a6",
+                        "outline": "#75777d",
+                        "on-error-container": "#93000a",
+                        "secondary": "#4648d4",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed-dim": "#bcc7de",
+                        "tertiary-fixed": "#fadfb8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#07006c",
+                        "surface-dim": "#cbdbf5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "md": "12px",
+                        "lg": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "xl": "24px",
+                        "margin": "16px",
+                        "gutter": "12px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "mono-sm": ["JetBrains Mono"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "mono-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="docked h-screen w-64 left-0 bg-background dark:bg-surface-container-lowest border-r border-outline-variant dark:border-outline fixed left-0 top-0 h-full w-64 flex flex-col py-lg px-md z-10">
+<div class="mb-xl flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">dns</span>
+</div>
+<div>
+<h1 class="font-title-md text-title-md font-bold text-primary">Operational Core</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">V2.4 Active</p>
+</div>
+</div>
+<ul class="flex-1 flex flex-col gap-xs">
+<li>
+<a class="flex items-center gap-sm text-on-surface-variant dark:text-on-surface-variant p-sm rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Operations</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary-fixed rounded-lg p-sm hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-on-surface-variant dark:text-on-surface-variant p-sm rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+<span class="font-label-md text-label-md">Recovery</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto border-t border-outline-variant dark:border-outline pt-md">
+<ul class="flex flex-col gap-xs">
+<li>
+<a class="flex items-center gap-sm text-on-surface-variant dark:text-on-surface-variant p-sm rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-label-md text-label-md">Help</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-on-surface-variant dark:text-on-surface-variant p-sm rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">sensors</span>
+<span class="font-label-md text-label-md">Status</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 flex flex-col min-h-screen bg-background relative overflow-y-auto">
+<!-- Header -->
+<header class="h-unit*8 px-xl py-lg flex justify-between items-center border-b border-outline-variant bg-surface sticky top-0 z-10">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Settings and Preferences</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Manage your operational view and notification alerts.</p>
+</div>
+<div class="flex items-center gap-md">
+<button class="h-[32px] px-md rounded bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors border border-outline-variant">
+                    Reset to Defaults
+                </button>
+<button class="h-[32px] px-md rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-inverse-surface transition-colors flex items-center gap-xs" id="save-btn">
+<span class="material-symbols-outlined text-[16px]">save</span>
+                    Save Preferences
+                </button>
+</div>
+</header>
+<div class="p-xl flex-1 max-w-5xl mx-auto w-full flex flex-col gap-xl">
+<!-- Saved Filters Grid -->
+<section class="bg-surface rounded-lg border border-outline-variant p-lg flex flex-col gap-md">
+<div class="flex items-center justify-between border-b border-outline-variant pb-sm">
+<h3 class="font-title-md text-title-md text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Saved Filters
+                    </h3>
+<button class="text-secondary hover:text-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Filter Item -->
+<div class="p-md rounded bg-surface-container-low border border-outline-variant hover:bg-surface-variant transition-colors cursor-pointer group flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-md text-label-md text-primary">Critical Incidents</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">more_vert</span>
+</div>
+<div class="flex flex-wrap gap-unit">
+<span class="px-sm py-[2px] bg-error/10 text-error rounded font-mono-sm text-[10px]">Severity: P1</span>
+<span class="px-sm py-[2px] bg-primary-fixed text-on-primary-fixed rounded font-mono-sm text-[10px]">Status: Open</span>
+</div>
+</div>
+<!-- Filter Item -->
+<div class="p-md rounded bg-surface-container-low border border-outline-variant hover:bg-surface-variant transition-colors cursor-pointer group flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-md text-label-md text-primary">Network Anomalies</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">more_vert</span>
+</div>
+<div class="flex flex-wrap gap-unit">
+<span class="px-sm py-[2px] bg-secondary-container text-on-secondary-container rounded font-mono-sm text-[10px]">Type: Network</span>
+<span class="px-sm py-[2px] bg-surface-variant text-on-surface-variant rounded font-mono-sm text-[10px]">Time: Last 24h</span>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<!-- Default Views -->
+<section class="bg-surface rounded-lg border border-outline-variant p-lg flex flex-col gap-md">
+<div class="border-b border-outline-variant pb-sm">
+<h3 class="font-title-md text-title-md text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+                            Default Views
+                        </h3>
+</div>
+<div class="flex flex-col gap-sm mt-xs">
+<label class="flex items-center gap-md p-sm rounded hover:bg-surface-container-low cursor-pointer border border-transparent hover:border-outline-variant transition-all">
+<input checked="" class="text-secondary focus:ring-secondary w-4 h-4" name="default_view" type="radio" value="list"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Compact List View</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Maximized data density for high-volume analysis.</span>
+</div>
+</label>
+<label class="flex items-center gap-md p-sm rounded hover:bg-surface-container-low cursor-pointer border border-transparent hover:border-outline-variant transition-all">
+<input class="text-secondary focus:ring-secondary w-4 h-4" name="default_view" type="radio" value="card"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Expanded Card View</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Detailed previews with metadata snippets.</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Notification Preferences -->
+<section class="bg-surface rounded-lg border border-outline-variant p-lg flex flex-col gap-md">
+<div class="border-b border-outline-variant pb-sm">
+<h3 class="font-title-md text-title-md text-primary flex items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+                            Notification Preferences
+                        </h3>
+</div>
+<div class="flex flex-col gap-sm mt-xs">
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded transition-colors border border-transparent hover:border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">System Alerts (P1/P2)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediate push notifications for critical events.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-9 h-5 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded transition-colors border border-transparent hover:border-outline-variant">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Batch Reports</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily digest of low-priority anomalies.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-9 h-5 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Toast Notification (Hidden by default) -->
+<div class="fixed bottom-lg right-lg bg-surface-container-highest border border-outline-variant shadow-sm rounded p-md flex items-center gap-sm transform translate-y-10 opacity-0 transition-all duration-300 pointer-events-none z-50" id="toast">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Settings Saved</span>
+</div>
+</main>
+<script>
+        document.getElementById('save-btn').addEventListener('click', function() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-10', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+            }, 3000);
+        });
+    </script>
+</body></html>
