@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "preferences": {
+    "theme": "system",
+    "density": "comfortable",
+    "notificationsEnabled": true,
+    "autoSave": true
+  },
+  "records": [
+    {
+      "id": "rec-001",
+      "name": "Sample Record",
+      "status": "pending",
+      "priority": "normal",
+      "payload": "Initial payload for the sample record.",
+      "flagged": false,
+      "createdAt": "2026-06-17T12:00:00.000Z"
+    }
+  ],
+  "ui": {
+    "view": "operations",
+    "filter": "",
+    "selectedRecordId": null,
+    "error": null
+  }
+}
