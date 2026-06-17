@@ -1,0 +1,819 @@
+[
+  {
+    "screenId": "abcb0b5db41d4e369f2959422dbcd916",
+    "screenTitle": "Settings and Preferences - SignalShelf Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 116
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 128
+      },
+      {
+        "type": "link",
+        "label": "Help",
+        "href": "#",
+        "line": 137
+      },
+      {
+        "type": "link",
+        "label": "Status",
+        "href": "#",
+        "line": 143
+      },
+      {
+        "type": "button",
+        "label": "Reset to Defaults",
+        "line": 160
+      },
+      {
+        "type": "button",
+        "label": "Preferences",
+        "line": 163
+      },
+      {
+        "type": "button",
+        "label": "add",
+        "line": 177
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 217
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 224
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 247
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 257
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 116
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 128
+      },
+      {
+        "type": "link",
+        "label": "Help",
+        "href": "#",
+        "line": 137
+      },
+      {
+        "type": "link",
+        "label": "Status",
+        "href": "#",
+        "line": 143
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Reset to Defaults",
+        "line": 160
+      },
+      {
+        "type": "button",
+        "label": "Preferences",
+        "line": 163
+      },
+      {
+        "type": "button",
+        "label": "add",
+        "line": 177
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 217
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 224
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 247
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 257
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 12,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "bbe98f54e3b9441facb63a5a63c66823",
+    "screenTitle": "Record Operations - SignalShelf Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 196
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 200
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 204
+      },
+      {
+        "type": "link",
+        "label": "Help",
+        "href": "#",
+        "line": 211
+      },
+      {
+        "type": "link",
+        "label": "Status",
+        "href": "#",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 227
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 243
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "Retry Load",
+        "line": 264
+      },
+      {
+        "type": "button",
+        "label": "Create Record",
+        "line": 268
+      },
+      {
+        "type": "button",
+        "label": "sort",
+        "line": 332
+      },
+      {
+        "type": "button",
+        "label": "chevron_left",
+        "line": 339
+      },
+      {
+        "type": "button",
+        "label": "chevron_right",
+        "line": 340
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 412
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 413
+      },
+      {
+        "type": "button",
+        "label": "Reject",
+        "line": 467
+      },
+      {
+        "type": "button",
+        "label": "Force Validate",
+        "line": 468
+      },
+      {
+        "type": "input",
+        "label": "Search...",
+        "inputType": "text",
+        "placeholder": "Search...",
+        "line": 236
+      },
+      {
+        "type": "input",
+        "label": "Filter records...",
+        "inputType": "text",
+        "placeholder": "Filter records...",
+        "line": 330
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 356
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 365
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 373
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 381
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 389
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 396
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 397
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 196
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 200
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 204
+      },
+      {
+        "type": "link",
+        "label": "Help",
+        "href": "#",
+        "line": 211
+      },
+      {
+        "type": "link",
+        "label": "Status",
+        "href": "#",
+        "line": 215
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 227
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 243
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "Retry Load",
+        "line": 264
+      },
+      {
+        "type": "button",
+        "label": "Create Record",
+        "line": 268
+      },
+      {
+        "type": "button",
+        "label": "sort",
+        "line": 332
+      },
+      {
+        "type": "button",
+        "label": "chevron_left",
+        "line": 339
+      },
+      {
+        "type": "button",
+        "label": "chevron_right",
+        "line": 340
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 412
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 413
+      },
+      {
+        "type": "button",
+        "label": "Reject",
+        "line": 467
+      },
+      {
+        "type": "button",
+        "label": "Force Validate",
+        "line": 468
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search...",
+        "inputType": "text",
+        "placeholder": "Search...",
+        "line": 236
+      },
+      {
+        "type": "input",
+        "label": "Filter records...",
+        "inputType": "text",
+        "placeholder": "Filter records...",
+        "line": 330
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 356
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 365
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 373
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 381
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 389
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 396
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 397
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 26,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "1006b0ab012c4d49851cf629eff60acb",
+    "screenTitle": "Record Editor - SignalShelf Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Close Editor",
+        "line": 138
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 223
+      },
+      {
+        "type": "button",
+        "label": "Record",
+        "line": 226
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 159
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 170
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 185
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 189
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 193
+      },
+      {
+        "type": "input",
+        "label": "Detail the intended payload structure and execution conditions...",
+        "inputType": "textarea",
+        "placeholder": "Detail the intended payload structure and execution conditions...",
+        "line": 206
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 216
+      },
+      {
+        "type": "form",
+        "label": "form",
+        "line": 144
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Close Editor",
+        "line": 138
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 223
+      },
+      {
+        "type": "button",
+        "label": "Record",
+        "line": 226
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 159
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 170
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 185
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 189
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 193
+      },
+      {
+        "type": "input",
+        "label": "Detail the intended payload structure and execution conditions...",
+        "inputType": "textarea",
+        "placeholder": "Detail the intended payload structure and execution conditions...",
+        "line": 206
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 216
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 11,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "d6323cd940954879b857ca8cacaa58ca",
+    "screenTitle": "Empty and Error Recovery - SignalShelf Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 126
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Help",
+        "href": "#",
+        "line": 136
+      },
+      {
+        "type": "link",
+        "label": "Status",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "link",
+        "label": "Settings",
+        "href": "#",
+        "line": 154
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Clear All Filters",
+        "href": "#",
+        "line": 200
+      },
+      {
+        "type": "link",
+        "label": "System Status: Online",
+        "href": "#",
+        "line": 211
+      },
+      {
+        "type": "link",
+        "label": "API Docs",
+        "href": "#",
+        "line": 215
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 216
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 222
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 226
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 230
+      },
+      {
+        "type": "button",
+        "label": "Retry Load",
+        "line": 193
+      },
+      {
+        "type": "button",
+        "label": "Create New Record",
+        "line": 197
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 126
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Help",
+        "href": "#",
+        "line": 136
+      },
+      {
+        "type": "link",
+        "label": "Status",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "link",
+        "label": "Settings",
+        "href": "#",
+        "line": 154
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Clear All Filters",
+        "href": "#",
+        "line": 200
+      },
+      {
+        "type": "link",
+        "label": "System Status: Online",
+        "href": "#",
+        "line": 211
+      },
+      {
+        "type": "link",
+        "label": "API Docs",
+        "href": "#",
+        "line": 215
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 216
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 222
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 226
+      },
+      {
+        "type": "link",
+        "label": "Recovery",
+        "href": "#",
+        "line": 230
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Retry Load",
+        "line": 193
+      },
+      {
+        "type": "button",
+        "label": "Create New Record",
+        "line": 197
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 17,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
